@@ -1,0 +1,170 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  color: white;
+  background: black;
+  z-index: -99999999;
+}
+
+header {
+  transition: all linear 1s;
+}
+#overlay.hide {
+  position: absolute;
+  top: 0;
+  left: 1900px;
+  width: 100vw;
+  height: 100vh;
+  overflow-x; hidden;
+  transition: all linear 1s;
+  background: #A0F0B0;
+}
+
+#overlay.show {
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all linear 1s;
+  background: #A0F0B0;
+}
+
+.menu {
+  position: fixed;
+  top: 2em;
+  left: 2.5em;
+  font-size:2em !important;
+  color: red;
+  transition: all linear 1s;
+  z-index: 999999999999;
+}
+
+.menu.hidden {
+  display: none;
+  transition: all linear 1s;
+}
+
+.nav {
+  display: flex;
+  transition: all linear 1s;
+}
+
+.nav > li {
+  list-style: none;
+  padding-right: 3em;
+  padding-left: 3em;
+  color: white;
+}
+
+.title {
+  justify-self: right;
+  padding-right: 5em;
+  transition: all linear 1s;
+}
+
+.overlay-content {
+  transition: all linear 1s;
+}
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  height: 90%;
+  grid-column-gap: 1em;
+  margin: 0 5em;
+  justify-content: center;
+  transition: all linear 1s;
+}
+
+.opacity {
+  opacity: .5;
+  transition: all linear 1s;
+}
+
+.showCloseMenu {
+  position: absolute;
+  top: 2em;
+  left: 2.5em;
+  font-size:2em;
+  transition: all linear 1s;
+}
+
+
+.flex {
+  display: grid;
+  grid-row-gap: 1em;
+  margin-top: 100%;
+  margin-bottom: 100%;
+  transition: all linear 1s;
+  grid-template-areas: "a"
+                       "b"
+                       "c"
+                       "d";
+}
+
+.a {
+  grid-area: a;
+}
+
+.b {
+  grid-area: b;
+}
+
+.c {
+  grid-area: c;
+}
+
+.d {
+  grid-area: d;
+}
+
+.flex > div {
+  max-height: 100%;
+  max-width: 100%;
+  transition: all linear 1s;
+  perspective: 0;
+}
+
+.flex > div.active {
+transform: scale(1.8,1.8);
+perspective: 100px;
+
+}
+
+.col_1 > div {
+  background: #7EF4AA;
+  perspective: 0px;
+}
+
+.col_1 > div :hover {
+  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+}
+
+.col_2 > div {
+  background: #7EF4AA;
+}
+
+.col_2 > div {
+  background: #7EF4AA;
+}
+
+.col_3 > div {
+  background: #87E6FA;
+}
+
+.col_4 > div {
+  background: #7EF4AA;
+}
+
+.col_5 > div {
+  background: #87E6FA;
+}
+.col_6 > div {
+  background: #7EF4AA;
+}
+
+.col_7 > div {
+  background: #87E6FA;
+}
+
+.col_8 > div {
+  background: #87E6FA;
+}
