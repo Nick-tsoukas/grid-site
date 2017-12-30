@@ -1,9 +1,11 @@
+@import url(https://fonts.googleapis.com/css?family=Press+Start+2P);
 html, body {
   height: 100%;
   margin: 0;
   color: white;
   background: black;
   z-index: -99999999;
+  font-family: 'Press Start 2P', cursive;
 }
 
 header {
@@ -12,24 +14,28 @@ header {
   justify-content: right;
 }
 
+body {
+  background:black;
+}
+
+/* background:url('http://www.zeldaelements.net/images/games/the_legend_of_zelda/characters/oldman.png');
+background:url('http://www.bryce-snyder.com/hosted/sword.png');
+background:url('http://files.gamebanana.com/img/ico/sprays/zelda_fire_render.gif'); */
+
 #zelda.displayHidden {
-  background: red;
   opacity: .1;
   position: absolute;
   right: -2000px;
-  transition: all linear 3s;
+  transition: all linear 1s;
 }
 
 #zelda {
-  position: absolute;
-  top: 0;
   display: grid;
   grid-gap: 2em;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr ;
   opacity: none;
-  height: 100%;
-  width: 100%;
-  background: red;
+  height: 50px;
+  width: 50%;
   transition: all linear 1s;
 }
 
@@ -159,7 +165,7 @@ height: 300px;
   width: 0;
   height: 100vh;
   overflow-x; hidden;
-  transition: all linear 1s;
+  transition: all linear .5s;
   background: #A0F0B0;
 }
 
@@ -168,7 +174,7 @@ height: 300px;
   left: 0;
   top: 0;
   width: 100vw;
-  transition: all linear 1s;
+  transition: all linear .5s;
   /* background: #A0F0B0; */
   background: white;
 }
@@ -218,7 +224,9 @@ height: 300px;
 .d {
   grid-area: d;
 }
-
+.e {
+  grid-area: e;
+}
 .flex > div {
   max-height: 100%;
   max-width: 100%;
@@ -229,14 +237,16 @@ height: 300px;
 .flex > div.active {
 transform: scale(1.8,1.8);
 perspective: 100px;
+border-radius: 5%;
 
 }
 
 .col_1 > div {
   background: #E76BE2;
-  perspective: 0px;
 }
-
+/* .col_1 > div::after {
+  content: "Hello world ";
+} */
 .col_1 > div :hover {
   /* box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6); */
 }

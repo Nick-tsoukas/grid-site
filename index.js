@@ -13,7 +13,10 @@
   var zelda = document.getElementsByClassName('zelda');
   var backZel = document.getElementById('zelda')
   var count = 0;
-
+  backZel.addEventListener('click',function(e) {
+    console.log(e)
+    backZel.className += ' displayHidden';
+  });
 // <section id="zelda" class="zeldaGrid displayHidden">
   function addZeldaClass() {
     backZel.className = backZel.className.slice(0,10);
@@ -26,6 +29,7 @@
       count++
     }
     else if(count === 5){
+      count = 0;
       addZeldaClass()
     }
   }
