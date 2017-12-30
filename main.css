@@ -8,24 +8,51 @@ html, body {
 
 header {
   transition: all linear 1s;
-}
-#overlay.hide {
-  position: absolute;
-  top: 0;
-  left: 1900px;
-  width: 100vw;
-  height: 100vh;
-  overflow-x; hidden;
-  transition: all linear 1s;
-  background: #A0F0B0;
+  display: flex;
+  justify-content: right;
 }
 
-#overlay.show {
+#zelda.displayHidden {
+  background: red;
+  opacity: .1;
   position: absolute;
-  left: 0;
+  right: -2000px;
+  transition: all linear 3s;
+}
+
+#zelda {
+  position: absolute;
   top: 0;
+  display: grid;
+  grid-gap: 2em;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  opacity: none;
+  height: 100%;
+  width: 100%;
+  background: red;
   transition: all linear 1s;
-  background: #A0F0B0;
+}
+
+#zelda > div {
+  min-height: 100%;
+  width: 200px;
+  background: green
+}
+h1.menu_block {
+  padding: 0;
+  margin: 0;
+  transition: all linear 1s;
+  color: black;
+  opacity: 1;
+}
+
+h1.menu_block.hidden {
+  opacity: .0;
+  transition: all linear 1s;
+}
+
+.logo {
+  text-align: center;
 }
 
 .menu {
@@ -33,12 +60,17 @@ header {
   top: 2em;
   left: 2.5em;
   font-size:2em !important;
-  color: red;
+  color: #A0F0B0;
   transition: all linear 1s;
   z-index: 999999999999;
 }
 
 .menu.hidden {
+  display: none;
+  transition: all linear 1s;
+}
+
+.flex.hidden {
   display: none;
   transition: all linear 1s;
 }
@@ -60,22 +92,93 @@ header {
   padding-right: 5em;
   transition: all linear 1s;
 }
-
-.overlay-content {
-  transition: all linear 1s;
+.col_1 {
+  transition: all linear .1s !important;
 }
+
+.col_1 > div:hover {
+  transform: translateY(-50px);
+  transition: all linear .3s !important;
+}
+.h {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#first.move {
+ display: flex;
+ justify-content: center;
+ position: absolute;
+ top: 30vh;
+ left:10vw;
+ width: 300px;
+ height: 300px;
+}
+
+#second.move {
+ display: flex;
+ position: absolute;
+ top: 30vh;
+ left:30vw;
+ width: 300px;
+ height: 300px;
+}
+
+#third.move {
+  display: flex;
+  position: absolute;
+  top: 30vh;
+  left:50vw;
+  width: 300px;
+  height: 300px;
+}
+
+#fourth.move {
+display: flex;
+position: absolute;
+top: 30vh;
+left:70vw;
+width: 300px;
+height: 300px;
+}
+
 .grid_container {
   display: grid;
   grid-template-columns: repeat(8, 1fr);
   height: 90%;
-  grid-column-gap: 1em;
+  grid-column-gap: 2em;
   margin: 0 5em;
   justify-content: center;
   transition: all linear 1s;
 }
 
+#overlay.hide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100vh;
+  overflow-x; hidden;
+  transition: all linear 1s;
+  background: #A0F0B0;
+}
+
+#overlay.show {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  transition: all linear 1s;
+  /* background: #A0F0B0; */
+  background: white;
+}
+
 .opacity {
   opacity: .5;
+  transition: all linear 1s;
+}
+
+.overlay-content {
   transition: all linear 1s;
 }
 
@@ -90,7 +193,7 @@ header {
 
 .flex {
   display: grid;
-  grid-row-gap: 1em;
+  grid-row-gap: 2em;
   margin-top: 100%;
   margin-bottom: 100%;
   transition: all linear 1s;
@@ -130,12 +233,12 @@ perspective: 100px;
 }
 
 .col_1 > div {
-  background: #7EF4AA;
+  background: #E76BE2;
   perspective: 0px;
 }
 
 .col_1 > div :hover {
-  box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6);
+  /* box-shadow: 5px 5px 5px rgba(68, 68, 68, 0.6); */
 }
 
 .col_2 > div {
